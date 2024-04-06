@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/*">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <section class="form_section">
+        <h2>Join Chatroom</h2>
+        <form method="post" class="form">
+            <label for="name">Username</label>
+            <input type="text" id="name" required>
+            <button type="submit">join</button>
+        </form>
+    </section>
+
+    <section class="chat__section">
+        <div class="chat_header">
+            <h2>Welcome to the chatroom</h2>
+        </div>
+        <div class="message__area"></div>
+        <div class="chat_footer">
+            <input type="text" required placeholder="Write a message.." id="message_box">
+            <img class="send-img" src="light.png" alt="send">
+        </div>
+
+        <div class="user-joined">
+
+        </div>
+
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+
+</html>

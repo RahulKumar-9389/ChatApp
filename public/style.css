@@ -1,0 +1,208 @@
+/* ============ ADD GOOGLE FONTS ======= */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* ======== Create Common Css ====== */
+:root {
+    --dark-color: #2b2d42;
+    --light-color: #edf2f4;
+    --gray-color: #e5e5e5;
+    --primary-font: 'Jost', sans-serif;
+    --secondary-font: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-color);
+}
+
+.form_section h2 {
+    font-family: var(--secondary-font);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.form_section h2::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: var(--dark-color);
+    bottom: -3px;
+    left: 0;
+}
+
+.form_section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_section label {
+    font-family: var(--primary-font);
+    color: var(--dark-color);
+    font-size: 1.7rem;
+}
+
+.form_section input {
+    padding: .5rem 1rem;
+    font-family: var(--primary-font);
+    color: var(--dark-color);
+    outline: none;
+    border: 1.5px solid gainsboro;
+    width: 300px;
+    transition: all .4s ease-in-out;
+    font-size: 1.65rem;
+}
+
+.form_section input:is(:active, :focus) {
+    border-color: var(--dark-color);
+}
+
+.form_section button {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: var(--primary-font);
+    font-size: 1.75rem;
+    padding: .5rem 0;
+    cursor: pointer;
+    border: 2px solid var(--dark-color);
+    margin-top: 2rem;
+    transition: all .4s ease-in-out;
+    border-radius: .4rem;
+    text-transform: uppercase;
+}
+
+.form_section button:hover {
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
+.chat__section {
+    height: 80vh;
+    width: 60vw;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+    position: relative;
+    border-radius: 1rem;
+    overflow-x: hidden;
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+
+.chat_header {
+    background-color: var(--dark-color);
+    padding: .6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat_header h2 {
+    font-size: 2.2rem;
+    color: var(--light-color);
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+
+
+.chat_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chat_footer input {
+    border: none;
+    outline: none;
+    font-family: var(--primary-font);
+    color: var(--dark-color);
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    background: var(--gray-color);
+    width: 100%;
+}
+
+.chat_footer img {
+    background-color: var(--dark-color);
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+.message__area {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    height: 65vh;
+    overflow: auto;
+}
+
+.message {
+    padding: .5rem .8rem;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+.left {
+    background: #8F8BE8;
+    color: #fff;
+}
+
+.right {
+    background: #e9eafd;
+    color: #787986;
+    margin-left: auto;
+}
+
+/* ============ New-User-Joined ========= */
+.user-joined {
+    font-family: var(--primary-font);
+    font-size: 1.7rem;
+    color: var(--dark-color);
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/*  responsive  */
+
+@media screen and (max-width: 600px) {
+    .chat__section {
+        width: 100vw;
+        border-radius: .2rem;
+    }
+}
